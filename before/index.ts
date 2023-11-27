@@ -4,11 +4,13 @@ class LapTop {
 
 class MacBook extends LapTop { }
 
+class Gram extends LapTop { }
+
 class Programmer {
 	private laptop: LapTop;
 
-	constructor() {
-		this.laptop = new MacBook();
+	constructor(laptop: LapTop) {
+		this.laptop = laptop;
 	}
 
 	public programming() {
@@ -16,5 +18,9 @@ class Programmer {
 	}
 }
 
-const programmer = new Programmer();
-programmer.programming();
+const programmer1 = new Programmer(new MacBook);
+const programmer2 = new Programmer(new Gram);
+
+programmer1.programming();
+programmer2.programming();
+
