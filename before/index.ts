@@ -1,10 +1,24 @@
-class LapTop {
-	public turnOn() { }
+interface LapTop {
+	turnOn(): void;
 }
 
-class MacBook extends LapTop { }
+class MacBook implements LapTop {
+	public turnOn() {
+		console.log('using macbook');
+	}
+}
 
-class Gram extends LapTop { }
+class Gram implements LapTop {
+	public turnOn() {
+		console.log('using gram');
+	}
+}
+
+class Lenono implements LapTop {
+	turnOn(): void {
+		console.log('using lenovo');
+	}
+}
 
 class Programmer {
 	private laptop: LapTop;
@@ -18,9 +32,11 @@ class Programmer {
 	}
 }
 
-const programmer1 = new Programmer(new MacBook);
-const programmer2 = new Programmer(new Gram);
+const programmer1 = new Programmer(new MacBook());
+const programmer2 = new Programmer(new Gram());
+const programmer3 = new Programmer(new Lenono());
 
 programmer1.programming();
 programmer2.programming();
+programmer3.programming();
 
