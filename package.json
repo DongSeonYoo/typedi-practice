@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec ts-node ./before/index.ts",
+    "start": "nodemon --exec ts-node ./after/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
